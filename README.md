@@ -1,2 +1,13 @@
 # App-Test-Fullstack-Front
- Test Fullstack Front Agence La Fusee
+
+## Contexte
+
+Ce projet est le test technique demandé par l'Agence La Fusée.
+
+## Comment lancer le projet ?
+
+Pour lancer le Frontend et le Backend, veuillez suivre les instructions dans les README présent dans les deux dossiers.
+
+Le projet a été testé sur node v21.6.2.
+
+
