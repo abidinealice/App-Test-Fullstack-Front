@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useState } from "react";
+import axios from 'axios'
+import { useState } from 'react'
 import {
   LoginContainer,
   LoginForm,
@@ -9,53 +9,55 @@ import {
   ContactFormBtn,
   LoginTypography,
   LoginTitle,
-} from "../../styles/login";
-import { Link, useNavigate } from "react-router-dom";
+} from '../../styles/login'
+import { Link, useNavigate } from 'react-router-dom'
+import AnimationCar from '../../components/Animation/car'
 
 function Login() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   //API URL
-  const urlAPI = "http://localhost:8080/api/auth/login";
+  const urlAPI = 'http://localhost:8080/api/auth/login'
 
   //Form data
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
+    name: '',
+    email: '',
+  })
 
   //Text above form
-  const [msg, setMsg] = useState();
+  const [msg, setMsg] = useState()
 
   //Form field
-  const [password, setPassword] = useState();
-  const [email, setEmail] = useState();
+  const [password, setPassword] = useState()
+  const [email, setEmail] = useState()
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const response = await axios.post(urlAPI, formData);
-      console.log("Form data send successfuly:", response.data);
-      console.log(response.data.token);
-      let token = response.data.token;
-      localStorage.setItem("token", token);
-      setMsg("");
-      setPassword("");
-      setEmail("");
-      navigate("/Landing");
+      const response = await axios.post(urlAPI, formData)
+      console.log('Form data send successfuly:', response.data)
+      console.log(response.data.token)
+      let token = response.data.token
+      localStorage.setItem('token', token)
+      setMsg('')
+      setPassword('')
+      setEmail('')
+      navigate('/Landing')
     } catch (error) {
-      console.error("Error submisssion form data");
-      setMsg("Adresse E-mail ou mot de passe incorrecte");
+      console.error('Error submisssion form data')
+      setMsg('Adresse E-mail ou mot de passe incorrecte')
     }
-  };
+  }
 
   return (
     <LoginContainer>
+      <AnimationCar />
       <LoginForm>
         <LoginTitle>Bienvenue sur ARVAL</LoginTitle>
         <ContactFormText>{msg}</ContactFormText>
@@ -82,14 +84,14 @@ function Login() {
 
           <ContactFormBtn type="submit">Connexion</ContactFormBtn>
         </ContactForm>
-        <Link to="/Signup" style={{ color: "#FFF" }}>
+        <Link to="/Signup" style={{ color: '#FFF' }}>
           <LoginTypography>
             Vous n'avez pas de compte ? Inscrivez-vous
           </LoginTypography>
         </Link>
       </LoginForm>
     </LoginContainer>
-  );
+  )
 }
 
-export default Login;
+export default Login

@@ -1,5 +1,5 @@
-import axios from "axios";
-import { useState } from "react";
+import axios from 'axios'
+import { useState } from 'react'
 import {
   LoginContainer,
   LoginForm,
@@ -9,55 +9,57 @@ import {
   ContactFormBtn,
   LoginTypography,
   LoginTitle,
-} from "../../styles/login";
-import { Link, useNavigate } from "react-router-dom";
+} from '../../styles/login'
+import { Link, useNavigate } from 'react-router-dom'
+import AnimationCar2 from '../../components/Animation/car2'
 
 function Signup() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   //API URL
-  const urlAPI = "http://localhost:8080/api/auth/signup";
+  const urlAPI = 'http://localhost:8080/api/auth/signup'
 
   //Form data
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-  });
+    name: '',
+    email: '',
+  })
 
   //Text above form
-  const [msg, setMsg] = useState();
+  const [msg, setMsg] = useState()
 
   //Form field
-  const [password, setPassword] = useState();
-  const [email, setEmail] = useState();
-  const [username, setUsername] = useState();
+  const [password, setPassword] = useState()
+  const [email, setEmail] = useState()
+  const [username, setUsername] = useState()
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     try {
-      const response = await axios.post(urlAPI, formData);
-      console.log("Form data send successfuly:", response.data);
-      navigate("/");
-      setMsg("");
-      setUsername("");
-      setPassword("");
-      setEmail("");
+      const response = await axios.post(urlAPI, formData)
+      console.log('Form data send successfuly:', response.data)
+      navigate('/')
+      setMsg('')
+      setUsername('')
+      setPassword('')
+      setEmail('')
     } catch (error) {
-      console.error("Error submisssion form data");
-      setMsg("Veuillez réessayer");
+      console.error('Error submisssion form data')
+      setMsg('Veuillez réessayer')
     }
-  };
+  }
 
   return (
     <LoginContainer>
       <LoginForm>
-        <LoginTitle>Bienvenue sur ARVAL</LoginTitle>
+        <AnimationCar2 />
+        <LoginTitle>Inscrivez-vous sur ARVAL</LoginTitle>
         <ContactFormText>{msg}</ContactFormText>
         <ContactForm onSubmit={handleSubmit}>
           <ContactFormField
@@ -92,14 +94,14 @@ function Signup() {
 
           <ContactFormBtn type="submit">Inscription</ContactFormBtn>
         </ContactForm>
-        <Link to="/" style={{ color: "#FFF" }}>
+        <Link to="/" style={{ color: '#FFF' }}>
           <LoginTypography>
             Vous avez déjà compte ? Connextez-vous
           </LoginTypography>
         </Link>
       </LoginForm>
     </LoginContainer>
-  );
+  )
 }
 
-export default Signup;
+export default Signup
