@@ -29,7 +29,7 @@ export const LandingBoxD = styled(Box)(() => ({
 }));
 
 export const LandingBoxT = styled(Box)(() => ({
-  padding: "20px 20px 35px 20px",
+  padding: "20px 30px 35px 30px",
   display: "flex",
   flexDirection: "column",
   gap: "10px",
@@ -40,7 +40,6 @@ export const LandingBoxT = styled(Box)(() => ({
 
 export const LandingBoxQ = styled(Box)(() => ({
   padding: "20px ",
-  margin: "12% 0 0 0",
   display: "flex",
   flexDirection: "column",
   gap: "10px",

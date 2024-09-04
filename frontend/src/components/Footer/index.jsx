@@ -1,10 +1,14 @@
-import { Box } from "@mui/material";
+import LanguageIcon from "@mui/icons-material/Language";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { FooterContainer, FooterTypography } from "../../styles/footer";
 
 function Footer() {
   return (
-    <Box>
-      <p>Arval.com</p>
-    </Box>
+    <FooterContainer>
+      <LanguageIcon />
+      <FooterTypography>Arval.com</FooterTypography>
+      <ArrowRightAltIcon />
+    </FooterContainer>
   );
 }
 

@@ -109,7 +109,7 @@ function Landing() {
           <LandingTypographySubTitle sx={{ margin: "15px 0" }}>
             2 formules sont proposées :
           </LandingTypographySubTitle>
-          <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          <Box sx={{ display: "flex", alignItems: "end", gap: "10px" }}>
             <LandingBoxT>
               <LandingTypographyUnderTitle>
                 Arval Switch Essentiel
