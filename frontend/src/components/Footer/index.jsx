@@ -1,8 +1,11 @@
+import { Box } from "@mui/material";
+
 function Footer() {
-  
-    return (
-      <h1>Footer page</h1>
-    );
-  }
-  
+  return (
+    <Box>
+      <p>Arval.com</p>
+    </Box>
+  );
+}
+
 export default Footer;
