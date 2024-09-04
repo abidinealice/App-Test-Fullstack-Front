@@ -12,7 +12,7 @@ Le projet a été testé sur node v21.6.2.
 
 Les données se trouvent dans le fichier .env qui n'est pas présent sur le repo GitHub.
 
-Vous pouvez vous connecter en utisant cet utilisateur qui peut lire et modifier toutes données de la base de données. Il vous suffira de modifier les valeurs des constantes name et password avec ceci :
+Vous pouvez vous connecter en utisant cet utilisateur qui peut lire et modifier toutes données de la base de données. Il vous suffira de modifier les valeurs des constantes name et password dans le fichier app.js avec ceci :
 
 UTILISATEUR : test
 MOT DE PASSE : LtIbAc10s5bOzoFa

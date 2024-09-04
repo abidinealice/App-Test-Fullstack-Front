@@ -10,4 +10,29 @@ Pour lancer le Frontend et le Backend, veuillez suivre les instructions dans les
 
 Le projet a été testé sur node v21.6.2.
 
+## Bibliotheques, Framework, outils et logiciels utilisés
 
+### BACKEND
+
+NodeJS
+Express
+Dotenv
+Bcrypt
+Jsonwebtoken
+Router
+Mongoose
+Mongoose unique validator
+MongoDB
+Postman
+
+### FRONTEND
+
+React
+Create React App
+MUI
+React Router
+Axios
+Framer Motion
+Animation et images (Storyset)
+Prettier
+Eslint
