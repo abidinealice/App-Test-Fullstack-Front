@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import Car from '../../images/Electric car-amico.svg'
+import Car from '../../assets/Electric car-amico.svg'
 
 export default function AnimationCar() {
   return (
@@ -8,8 +8,8 @@ export default function AnimationCar() {
         style={{
           width: '400px',
           position: 'absolute',
-          left: '12%',
-          top: '18%',
+          left: '20%',
+          top: '20%',
           zIndex: '1',
         }}
         animate={{ y: [5, -5] }}

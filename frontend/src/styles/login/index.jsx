@@ -14,13 +14,14 @@ export const LoginForm = styled(Box)(() => ({
   flexDirection: 'column',
   alignItems: 'end',
   padding: '40px 75px 40px 0',
-  margin: '5% 40px 0 40px',
+  margin: '5% auto',
+  width: '900px',
   backgroundColor: Colors.title,
   borderRadius: '5px',
   gap: '25px',
 }))
 
-//TEXT
+//TYPOGRAPHY
 
 export const LoginTitle = styled(Typography)(() => ({
   fontSize: '30px',

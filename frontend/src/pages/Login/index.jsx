@@ -44,10 +44,12 @@ function Login() {
       console.log('Form data send successfuly:', response.data)
       console.log(response.data.token)
       let token = response.data.token
-      localStorage.setItem('token', token)
+      sessionStorage.setItem('token', token)
+      //Remove fields
       setMsg('')
       setPassword('')
       setEmail('')
+      //Go to landing page
       navigate('/Landing')
     } catch (error) {
       console.error('Error submisssion form data')
@@ -60,7 +62,7 @@ function Login() {
       <AnimationCar />
       <LoginForm>
         <LoginTitle>Bienvenue sur ARVAL</LoginTitle>
-        <ContactFormText>{msg}</ContactFormText>
+        <ContactFormText sx={{ paddingRight: '1%' }}>{msg}</ContactFormText>
         <ContactForm onSubmit={handleSubmit}>
           <ContactFormField
             variant="filled"

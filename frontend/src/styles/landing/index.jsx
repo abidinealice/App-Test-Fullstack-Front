@@ -97,12 +97,12 @@ export const LandingPicto1 = styled('img')(() => ({
 export const LandingPicto2 = styled('img')(() => ({
   position: 'absolute',
   width: '65px',
-  top: '105%',
+  top: '110%',
   left: '47%',
 }))
 export const LandingPicto3 = styled('img')(() => ({
   position: 'absolute',
   width: '180px',
   right: '10%',
-  top: '86%',
+  top: '90%',
 }))

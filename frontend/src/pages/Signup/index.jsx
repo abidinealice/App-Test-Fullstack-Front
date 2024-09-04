@@ -44,7 +44,9 @@ function Signup() {
     try {
       const response = await axios.post(urlAPI, formData)
       console.log('Form data send successfuly:', response.data)
+      //Go to connection page
       navigate('/')
+      //Remove fields
       setMsg('')
       setUsername('')
       setPassword('')
@@ -60,7 +62,7 @@ function Signup() {
       <LoginForm>
         <AnimationCar2 />
         <LoginTitle>Inscrivez-vous sur ARVAL</LoginTitle>
-        <ContactFormText>{msg}</ContactFormText>
+        <ContactFormText sx={{ paddingRight: '10%' }}>{msg}</ContactFormText>
         <ContactForm onSubmit={handleSubmit}>
           <ContactFormField
             variant="filled"
@@ -96,7 +98,7 @@ function Signup() {
         </ContactForm>
         <Link to="/" style={{ color: '#FFF' }}>
           <LoginTypography>
-            Vous avez déjà compte ? Connextez-vous
+            Vous avez déjà compte ? Connectez-vous
           </LoginTypography>
         </Link>
       </LoginForm>
