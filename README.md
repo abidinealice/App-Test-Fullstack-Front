@@ -33,6 +33,6 @@ MUI
 React Router
 Axios
 Framer Motion
-Animation et images (Storyset)
+Animations et images pages erreur, landing, login, signup (Storyset)
 Prettier
 Eslint
